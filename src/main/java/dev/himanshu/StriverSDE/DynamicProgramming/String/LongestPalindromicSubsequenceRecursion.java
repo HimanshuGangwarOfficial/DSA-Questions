@@ -1,15 +1,14 @@
 package dev.himanshu.StriverSDE.DynamicProgramming.String;
 
-import java.util.Collections;
-
-public class LongestPalindromeRecursion {
+public class LongestPalindromicSubsequenceRecursion {
 
     public static void main(String[] args) {
-
+        int ans = longestPalindrome("bbabcbcab");
+        System.out.println(ans);
     }
 
-    public static String longestPalindrome(String s){
-        longestPalindrome(s, ,
+    public static int longestPalindrome(String s){
+        return longestPalindrome(s, new StringBuilder(s).reverse().toString(), s.length()-1, s.length()-1);
     }
 
     private static int longestPalindrome(String s1, String s2, int m, int n){

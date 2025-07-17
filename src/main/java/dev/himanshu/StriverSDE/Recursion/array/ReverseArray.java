@@ -2,7 +2,7 @@ package dev.himanshu.StriverSDE.Recursion.array;
 
 import java.util.Arrays;
 
-public class Reverse {
+public class ReverseArray {
     public static void main(String[] args) {
         int[] a = {1,2,3,4,5,6,7,8,9};
 //        reverse(a, 0, a.length-1);

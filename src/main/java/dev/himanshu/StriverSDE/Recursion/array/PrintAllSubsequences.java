@@ -3,7 +3,7 @@ package dev.himanshu.StriverSDE.Recursion.array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllSubsequences {
+public class PrintAllSubsequences {
     public static void main(String[] args) {
         int[] arr = {3,1,2};
         subsequences(arr, 0, new ArrayList<>());

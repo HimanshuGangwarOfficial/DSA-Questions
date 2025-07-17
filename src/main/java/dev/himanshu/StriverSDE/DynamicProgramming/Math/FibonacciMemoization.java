@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class FibonacciMemoization {
     public static void main(String[] args) {
-        int n = 100;
+        int n = 60;
         int[] dp = new int[n+1];
         Arrays.fill(dp, -1);
         int ans = fibonacci(n, dp);

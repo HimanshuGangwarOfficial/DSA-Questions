@@ -1,13 +1,14 @@
 package dev.himanshu.StriverSDE.Arrays;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-public class LongestSubstringWithoutRepeatBetter {
+public class LongestSubstringWithoutRepeatOptimal {
 
     public static void main(String[] args) {
 
-        String s = "pwwkew";
+        String s = "dvdf";
         int maxLength = lengthOfLongestSubstring(s);
         System.out.println(maxLength);
     }
@@ -15,26 +16,19 @@ public class LongestSubstringWithoutRepeatBetter {
     public static int lengthOfLongestSubstring(String s) {
 
         int maxLength = 0;
-        char[] array =  s.toCharArray();
         int left = 0;
         int right = 0;
 
-        Set<Character> set = new HashSet<>();
+        HashMap<Character, Integer> map = new HashMap<>();
 
-
-        for(int i=0; i<s.length(); i++){
-
-            while(set.contains(array[i])){
-                set.remove(array[left]);
-                left++;
-
+        while(right < s.length()){
+            if(map.containsKey(s.charAt(right))){
+                left = Math.max(map.get(s.charAt(right))+1, left);
             }
 
-            int length = right-left +1;
-            maxLength = Math.max(length, maxLength);
-            set.add(array[i]);
+            map.put(s.charAt(right), right);
+            maxLength = Math.max(maxLength, right-left +1);
             right++;
-
         }
 
         return maxLength;

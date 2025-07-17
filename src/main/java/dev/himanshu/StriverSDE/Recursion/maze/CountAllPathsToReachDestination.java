@@ -1,6 +1,6 @@
 package dev.himanshu.StriverSDE.Recursion.maze;
 
-public class CountAllWaysToReachDestination {
+public class CountAllPathsToReachDestination {
 
     public static void main(String[] args) {
         int ans = count(3,3);

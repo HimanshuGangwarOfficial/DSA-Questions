@@ -1,11 +1,11 @@
-package dev.himanshu.StriverSDE.Recursion.maze;
+package dev.himanshu.StriverSDE.Recursion.maze.backtracking;
 
-public class MazeWithObstacles {
+public class PrintAllPathIncludingUpBack {
     public static void main(String[] args) {
 
         boolean[][] maze = {
                 {true, true, true},
-                {true, false, true},
+                {true, true, true},
                 {true, true, true}
         };
 
@@ -26,6 +26,8 @@ public class MazeWithObstacles {
         if(!maze[row-1][col-1])
             return;
 
+        maze[row-1][col-1] = false;
+
         if(row>1){
             path(s+"D",maze, row-1, col);
         }
@@ -33,6 +35,16 @@ public class MazeWithObstacles {
         if(col>1){
             path(s+"R", maze, row, col-1);
         }
+
+        if(row<3){
+            path(s+"U",maze, row+1, col);
+        }
+
+        if(col<3){
+            path(s+"B", maze, row, col+1);
+        }
+
+        maze[row-1][col-1] = true;
 
     }
 

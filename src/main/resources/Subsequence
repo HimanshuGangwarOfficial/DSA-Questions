@@ -1,0 +1,21 @@
+What is Subsequence?
+All the combination from String/Array :
+1. Which maintains the order
+2. Don't need to be consecutive.
+
+Note: Given a string/array of length n. Number of subsequences are 2^n.
+
+Ex:
+abc = a, b, c, ab, bc, ac, abc , ""
+
+Questions:
+
+1. Print all the subsequences
+    1.1 Powerset: https://www.youtube.com/watch?v=b7AYbpM5YrE
+    1.2 Resursion: https://www.youtube.com/watch?v=AxNNVECce8c
+
+2. Longest common subsequence: https://www.youtube.com/watch?v=NPZn9jBrX8U
+
+
+
+

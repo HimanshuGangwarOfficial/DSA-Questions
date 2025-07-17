@@ -1,6 +1,9 @@
 package dev.himanshu.StriverSDE.Arrays;
 
-public class LongestSubArrayWithSumKPositiveBrute2 {
+import java.util.HashMap;
+import java.util.Map;
+
+public class LongestSubArrayWithSumKPositiveBetter {
     public static void main(String[] args) {
 
         int[] arr = {10, 5, 2, 7, 1, -10};
@@ -12,14 +15,21 @@ public class LongestSubArrayWithSumKPositiveBrute2 {
     public static int longestSubarray(int[] arr, int targetSum) {
         int maxLength = 0;
 
-        for(int i = 0; i< arr.length; i++){
-            int sum = 0;
-            for(int j=i; j< arr.length; j++){
-               sum+=arr[j];
+        Map<Long, Integer> map = new HashMap<>();
+        long sum = 0;
+        for(int i=0;i<arr.length;i++){
+            sum+=(long)arr[i];
 
-                if(sum == targetSum)
-                    maxLength = Math.max(maxLength, j-i+1);
+            if(sum==targetSum)
+                maxLength = Math.max(maxLength, i+1);
+
+            if(map.containsKey(sum-targetSum)){
+                maxLength = Math.max(maxLength, i- map.get(sum-targetSum));
             }
+
+            if(!map.containsKey(sum))
+                map.put(sum, i);
+
         }
 
         return maxLength;

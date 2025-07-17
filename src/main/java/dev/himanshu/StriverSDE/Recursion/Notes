@@ -1,0 +1,8 @@
+Basic Recursion Problems:
+-------------------------
+1. Print name 5 times
+2. Print linearly from 1 to n
+3. Print linearly from n to 1
+4. Print linearly from 1 to n (But by backtracking)
+5. Print linearly from n to 1 (But by backtracking)
+6. Sum of First n numbers (Parameter way + Functional way)

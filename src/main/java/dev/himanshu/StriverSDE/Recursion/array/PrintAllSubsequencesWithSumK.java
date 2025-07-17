@@ -7,10 +7,10 @@ import java.util.List;
 /*
 *  Print all the subsequences with the given sum K
 * */
-public class SubsequencesWithSumK {
+public class PrintAllSubsequencesWithSumK {
     public static void main(String[] args) {
-        int[] arr = {1,2,1};
-        int k = 2;
+        int[] arr = {1,2,1, 3, 4};
+        int k = 4;
         subsequences(arr, k);
     }
 

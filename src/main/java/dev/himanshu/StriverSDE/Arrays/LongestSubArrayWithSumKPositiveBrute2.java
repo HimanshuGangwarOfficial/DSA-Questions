@@ -1,6 +1,6 @@
 package dev.himanshu.StriverSDE.Arrays;
 
-public class LongestSubArrayWithSumKPositiveBrute1 {
+public class LongestSubArrayWithSumKPositiveBrute2 {
     public static void main(String[] args) {
 
         int[] arr = {10, 5, 2, 7, 1, -10};
@@ -13,11 +13,10 @@ public class LongestSubArrayWithSumKPositiveBrute1 {
         int maxLength = 0;
 
         for(int i = 0; i< arr.length; i++){
+            int sum = 0;
             for(int j=i; j< arr.length; j++){
-                int sum = 0;
-                for(int k=i ;k<=j; k++){
-                    sum+=arr[k];
-                }
+               sum+=arr[j];
+
                 if(sum == targetSum)
                     maxLength = Math.max(maxLength, j-i+1);
             }
