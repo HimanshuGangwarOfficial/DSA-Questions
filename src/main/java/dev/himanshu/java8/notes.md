@@ -14,3 +14,17 @@ Requirements:
 - Use `Predicate.and()`, `Predicate.or()`, and `Predicate.negate()` to combine multiple conditions.
 
 Allow users to enter the filter condition dynamically (e.g., through input) and apply it.
+
+### 2. Mapping and Chaining
+
+Implement a system that processes a list of strings and transforms them into uppercase, trims them, and calculates the length of each string using `Function`.
+
+Requirements:
+- Create a list of strings (e.g., names or sentences).
+- Use `Function<String, String>` to:
+- Convert each string to uppercase.
+- Trim any extra spaces.
+- Use `Function<String, Integer>` to calculate the length of each string after applying the transformations.
+- Chain the functions using `andThen()` and `compose()` methods.
+
+Implement error handling for empty strings and null values in the list.
