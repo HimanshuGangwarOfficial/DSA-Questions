@@ -16,7 +16,7 @@ public class EmployeeRepository {
         employeeList.add(new Employee("Arun", 30, 50000));
         employeeList.add(new Employee("Anuj", 7, 90000));
         employeeList.add(new Employee("Amrita", 32, 100000));
-        employeeList.add(new Employee("Abhishesk", 29, 120000));
+        employeeList.add(new Employee("Abhishek", 29, 120000));
         employeeList.add(new Employee("Alice", 28, 60000));
         employeeList.add(new Employee("Bob", 35, 55000));
         employeeList.add(new Employee("Charlie", 42, 70000));

@@ -4,14 +4,20 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
-public class Main {
+public class FunctionDemo {
 
     public static void main(String[] args) {
+        FunctionDemo functionDemo = new FunctionDemo();
         List<String> strings = Arrays.asList("   Alice   ", "Bob", "  Charlie   ", "", null, " David ");
+        List<Integer> result = functionDemo.process(strings);
+        result.forEach(System.out::println);
+    }
+
+    public List<Integer> process(List<String> strings) {
 
         Function<String, Integer> combineResult = applyActions();
 
-        strings.stream().map(combineResult).forEach(System.out::println);
+        return strings.stream().map(combineResult).toList();
     }
 
     private static Function<String, Integer> applyActions() {

@@ -28,3 +28,17 @@ Requirements:
 - Chain the functions using `andThen()` and `compose()` methods.
 
 Implement error handling for empty strings and null values in the list.
+
+### 3. Process Data in Stream
+
+Implement a consumer that processes and modifies a collection of objects (e.g., list of products) and prints the results using `Consumer`.
+
+Requirements:
+- Define a `Product` class with fields such as `name`, `price`, and `category`.
+- Create a list of `Product` objects.
+- Use `Consumer<Product>` to perform the following operations:
+- Increase the price of products based on certain criteria (e.g., category, price threshold).
+- Print the names of products after modifying them.
+- Use the `forEach()` method in a stream to process the products.
+
+Implement a system that calculates the total value of modified products and prints it.

@@ -6,7 +6,7 @@ import dev.himanshu.java8.functionalInterfaces.util.EmployeeRepository;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class Main {
+public class PredicateDemo {
 
     public static void main(String[] args) {
         List<Employee> employeeList = EmployeeRepository.getAllEmployees();
